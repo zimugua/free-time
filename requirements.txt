@@ -1,0 +1,4 @@
+# 美团智能出行规划 Agent 依赖
+gradio>=4.0.0
+pyyaml>=6.0
+openai>=1.0.0   # 用于 LLM 调用（DeepSeek/OpenAI/通义 等兼容接口）

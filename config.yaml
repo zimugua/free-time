@@ -1,0 +1,56 @@
+# =============================================
+# 大模型 API 配置文件
+# 请修改下方参数以接入你的大模型服务
+# =============================================
+
+llm:
+  # 服务商：openai / deepseek / zhipu / qwen / moonshot / custom
+  provider: "deepseek"
+
+  # API Key（必填）
+  api_key: ""
+#  api_key: "sk-your-api-key-here"
+
+  # API Base URL
+  # OpenAI 官方: https://api.openai.com/v1
+  # DeepSeek:    https://api.deepseek.com/v1
+  # 智谱AI:      https://open.bigmodel.cn/api/paas/v4
+  # 通义千问:    https://dashscope.aliyuncs.com/compatible-mode/v1
+  # Moonshot:    https://api.moonshot.cn/v1
+  base_url: "https://api.deepseek.com/v1"
+
+  # 模型名称
+  # DeepSeek: deepseek-chat / deepseek-reasoner
+  # OpenAI:   gpt-4o / gpt-4o-mini / gpt-3.5-turbo
+  # 智谱AI:   glm-4 / glm-4-flash
+  # 通义千问: qwen-plus / qwen-turbo / qwen-max
+  # Moonshot: moonshot-v1-8k / moonshot-v1-32k
+  model: "deepseek-chat"
+
+  # 请求超时（秒）
+  timeout: 30
+
+  # 温度参数（0.0-2.0，越低越确定性，越高越发散）
+  temperature: 0.7
+
+  # 最大输出 token 数
+  max_tokens: 2000
+
+# =============================================
+# 应用配置
+# =============================================
+app:
+  # Web UI 端口
+  port: 7860
+
+  # 是否允许外部访问（True 则局域网可访问）
+  share: false
+
+  # 默认出发城市（用于活动推荐参考）
+  city: "北京"
+
+  # 默认出发时间（24小时制，默认下午2点）
+  default_start_hour: 14
+
+  # 默认活动总时长（小时）
+  default_duration_hours: 5
